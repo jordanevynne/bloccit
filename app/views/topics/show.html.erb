@@ -27,11 +27,12 @@
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
-            <%= render partial: "comments/comment", locals: { comment: topic.comments } %>
+            <%= render partial: "comments/comment", locals: { comment: comment } %>
           </h4>
           <small>
         </div>
-    </div>
+      </div>
+      <% end %>
 
     <% if current_user %>
     <div class="col-md-4">
