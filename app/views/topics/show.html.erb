@@ -23,7 +23,14 @@
           </div>
         </div>
       <% end %>
-
+    <% @topic.comments.each do |comment| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= render partial: "comments/comment", locals: { comment: topic.comments } %>
+          </h4>
+          <small>
+        </div>
     </div>
 
     <% if current_user %>
