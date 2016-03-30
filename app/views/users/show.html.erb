@@ -20,7 +20,9 @@
 </div>
 
 <h2>Posts</h2>
-<%= render @user.posts %>
+  <%= render @user.posts %>
+  <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
+<% else %>
 
 <h2>Comments</h2>
 <%= render @user.comments %>

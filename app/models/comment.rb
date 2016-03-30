@@ -14,4 +14,8 @@ class Comment < ActiveRecord::Base
       FavoriteMailer.new_comment(favorite.user, post, self).deliver_now
     end
   end
+
+  def user_has_comments
+    comments.count > 0
+  end
 end
